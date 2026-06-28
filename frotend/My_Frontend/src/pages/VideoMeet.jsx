@@ -13,7 +13,7 @@ import StopScreenShareIcon from '@mui/icons-material/StopScreenShare'
 import ChatIcon from '@mui/icons-material/Chat'
 
 
-const server_url = "http://localhost:3000/";
+const server_url = import.meta.env.VITE_API_URL;
 
 var connections = {};//conection help karega jaise <conncection>socek.id:RTCPEERCONNECTION ,socket.id2</conncection>
 
