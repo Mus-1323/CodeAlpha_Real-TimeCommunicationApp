@@ -71,13 +71,19 @@ export default function Authentication() {
             <Grid container component="main" sx={{ height: '100vh' }}>
                 <CssBaseline />
                 <Grid
-                  size={{ sm: 4, md: 7 }}
-                   sx={{
-                  backgroundImage: 'url(/background.png)',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                 }}
+                    item
+                    xs={false}
+                    sm={4}
+                    md={7}
+                    sx={{
+                        
+                        minHeight: '100vh',
+                        backgroundImage: 'url(/background.png)',
+                        backgroundColor: (t) =>
+                            t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                    }}
                 />
                 <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
                      <Box 
