@@ -8,11 +8,14 @@ import { connectTOSocket } from "./controller/socketManager.js";
 import  userRoute from "./routes/usercreate.js";
 dotenv.config();
 
+
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: "40kb" }));
 app.use(express.urlencoded({ extended: true, limit: "40kb" }));
 app.use("/api/v1/users",userRoute);
+
+
 
 const server = createServer(app);//express+server
 //server (expres) se socket.io
